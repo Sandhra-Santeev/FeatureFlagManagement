@@ -1,0 +1,26 @@
+.card {
+    border: none;
+    border-radius: 12px;
+}
+
+.table th {
+    vertical-align: middle;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.form-check-input {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.btn {
+    width: 38px;
+    height: 38px;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}

@@ -1,0 +1,85 @@
+<div class="container mt-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-6 col-md-8">
+
+            <div class="card shadow">
+
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">Edit Feature</h3>
+                </div>
+
+                <div class="card-body">
+
+                    <form
+                        [formGroup]="featureForm"
+                        (ngSubmit)="updateFeature()">
+
+                        <!-- Feature Name -->
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Feature Name
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                formControlName="name"
+                                placeholder="Enter feature name">
+
+                        </div>
+
+                        <!-- Description -->
+                        <div class="mb-4">
+
+                            <label class="form-label">
+                                Description
+                            </label>
+
+                            <textarea
+                                rows="4"
+                                class="form-control"
+                                formControlName="description"
+                                placeholder="Enter description">
+                            </textarea>
+
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="d-flex justify-content-between">
+
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                routerLink="/dashboard">
+
+                                Cancel
+
+                            </button>
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                                [disabled]="featureForm.invalid">
+
+                                <i class="bi bi-check-circle me-2"></i>
+
+                                Update Feature
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,97 @@
+<div class="row justify-content-center">
+
+    <div class="col-lg-6">
+
+        <div class="card shadow">
+
+            <div class="card-header bg-primary text-white">
+
+                <h4 class="mb-0">
+
+                    Check Feature Status
+
+                </h4>
+
+            </div>
+
+            <div class="card-body">
+
+                <form
+                    [formGroup]="featureForm"
+                    (ngSubmit)="checkFeature()">
+
+                    <div class="mb-4">
+
+                        <label class="form-label">
+
+                            Feature Key
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Enter feature key"
+                            formControlName="key">
+
+                    </div>
+
+                    <button
+                        class="btn btn-primary w-100"
+                        type="submit">
+
+                        Check Feature
+
+                    </button>
+
+                </form>
+
+                <div
+                    *ngIf="result"
+                    class="mt-4">
+
+                    <hr>
+
+                    <h5>
+
+                        Feature
+
+                    </h5>
+
+                    <p>
+
+                        {{ result.key }}
+
+                    </p>
+
+                    <h5>
+
+                        Status
+
+                    </h5>
+
+                    <span
+                        *ngIf="result.enabled"
+                        class="badge bg-success fs-6">
+
+                        Enabled
+
+                    </span>
+
+                    <span
+                        *ngIf="!result.enabled"
+                        class="badge bg-danger fs-6">
+
+                        Disabled
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

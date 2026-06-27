@@ -1,0 +1,137 @@
+<div class="container vh-100 d-flex align-items-center justify-content-center">
+
+    <div class="col-lg-5 col-md-7 col-sm-10">
+
+        <div class="card shadow">
+
+            <div class="card-header bg-primary text-white text-center">
+
+                <h3 class="mb-0">
+
+                    Organization Admin Registration
+
+                </h3>
+
+            </div>
+
+            <div class="card-body">
+
+                <form
+                    [formGroup]="registerForm"
+                    (ngSubmit)="register()">
+
+                    <!-- Organization -->
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+
+                            Organization
+
+                        </label>
+
+                        <select
+                            class="form-select"
+                            formControlName="organizationId">
+
+                            <option value="">
+
+                                Select Organization
+
+                            </option>
+
+                            <option
+                                *ngFor="let org of organizations"
+                                [value]="org._id">
+
+                                {{ org.name }}
+
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- Username -->
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+
+                            Username
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            formControlName="username">
+
+                    </div>
+
+                    <!-- Email -->
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+
+                            Email
+
+                        </label>
+
+                        <input
+                            type="email"
+                            class="form-control"
+                            formControlName="email">
+
+                    </div>
+
+                    <!-- Password -->
+
+                    <div class="mb-4">
+
+                        <label class="form-label">
+
+                            Password
+
+                        </label>
+
+                        <input
+                            type="password"
+                            class="form-control"
+                            formControlName="password">
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary w-100"
+                        [disabled]="registerForm.invalid">
+
+                        Register
+
+                    </button>
+
+                </form>
+
+                <hr>
+
+                <p class="text-center mb-0">
+
+                    Already have an account?
+
+                    <a routerLink="/login">
+
+                        Login
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

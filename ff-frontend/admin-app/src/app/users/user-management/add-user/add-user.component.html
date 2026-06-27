@@ -1,0 +1,105 @@
+<div class="container mt-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-6 col-md-8">
+
+            <div class="card shadow">
+
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">Add User</h3>
+                </div>
+
+                <div class="card-body">
+
+                    <form
+                        [formGroup]="userForm"
+                        (ngSubmit)="addUser()">
+
+                       
+                       <div class="mb-3">
+
+                        <label class="form-label">
+
+                            Username
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            formControlName="username">
+
+                    </div>
+
+                    <!-- Email -->
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+
+                            Email
+
+                        </label>
+
+                        <input
+                            type="email"
+                            class="form-control"
+                            formControlName="email">
+
+                    </div>
+
+                    <!-- Password -->
+
+                    <div class="mb-4">
+
+                        <label class="form-label">
+
+                            Password
+
+                        </label>
+
+                        <input
+                            type="password"
+                            class="form-control"
+                            formControlName="password">
+
+                    </div>
+
+                    
+                    
+
+                        <!-- Buttons -->
+                        <div class="d-flex justify-content-between">
+
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                routerLink="/dashboard">
+
+                                Cancel
+
+                            </button>
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                                [disabled]="userForm.invalid">
+
+                                Add User
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

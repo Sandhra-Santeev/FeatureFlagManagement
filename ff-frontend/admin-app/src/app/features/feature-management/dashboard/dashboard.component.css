@@ -1,0 +1,19 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.navbar-brand {
+    font-size: 1.3rem;
+}
+
+h2 {
+    margin: 0;
+}
+
+.btn {
+    border-radius: 8px;
+}

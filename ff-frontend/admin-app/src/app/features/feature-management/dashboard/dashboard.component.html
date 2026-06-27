@@ -1,0 +1,62 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold" href="#">
+      <i class="fa-solid fa-flag me-1"></i> Feature Flag Admin
+    </a>
+
+    <div class="d-flex align-items-center">
+
+      <span class="text-white me-3">
+        Welcome, <strong>{{ user.username }}</strong>
+      </span>
+      
+
+      <button class="btn btn-light btn-sm"  (click)="logout()">
+        Logout
+      </button>
+
+    </div>
+
+  </div>
+</nav>
+
+<!-- Dashboard Content -->
+<div class="container py-4">
+
+  <div class="d-flex justify-content-between align-items-center mb-4">
+
+    <div>
+      <h2 class="fw-bold mb-1">Dashboard</h2>
+      <p class="text-muted mb-0">
+        Manage your organization's feature flags
+      </p>
+    </div>
+
+    <div class="d-flex gap-2">
+        <button
+      class="btn btn-primary"
+      routerLink="/dashboard/features/add">
+
+      <i class="fa-solid fa-list"></i>
+      Add Feature
+
+    </button>
+    <button
+      class="btn btn-primary"
+      routerLink="/dashboard/user">
+
+     <i class="fa-solid fa-user"></i>
+      Add User
+
+    </button>
+    </div>
+
+  </div>
+
+  <app-feature-list></app-feature-list>
+
+</div>
+
+
